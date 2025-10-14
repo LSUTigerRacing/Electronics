@@ -1,0 +1,137 @@
+(footprint "CRCW0805"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "7eff39f0-4e73-45de-afe0-324165a37aa6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "CRCW0805"
+		(at 0.5 -3 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "d9a12a53-deb3-4993-a939-2080aced08d5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c8902d12-e217-4c07-a63f-48cb39b58f7b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "CRCW0805 Footprint based off averages of Relay Soldering and Wave Soldering measurements"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "16fce4b3-6d6a-49ab-b42e-2cd8cac94799")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.5 -1)
+		(end 1.5 -1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8ee73096-375e-489c-a61e-97e9a364c498")
+	)
+	(fp_line
+		(start -1.5 1)
+		(end 1.5 1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "bbdc69dc-50a5-40af-b6f0-aa660f4420e2")
+	)
+	(fp_rect
+		(start -2.1 -1.125)
+		(end 2.1 1.125)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "58169211-ab9d-4c5a-9bdb-3a9d88663ae6")
+	)
+	(fp_rect
+		(start -1.75 -0.75)
+		(end 1.75 0.75)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a8294082-1dc7-4300-8fe0-f6779feb997a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.5 -5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e149dce3-0577-4af0-9423-589751c6e55c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.0375 0)
+		(size 1.125 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "af8751b9-3992-4687-bca3-dd3b3eda8898")
+	)
+	(pad "2" smd roundrect
+		(at 1.0375 0)
+		(size 1.125 1.525)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(uuid "0a33eb6d-4b25-4ac9-8bf1-c343731a4af6")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1.4 1.1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

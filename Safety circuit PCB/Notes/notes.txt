@@ -1,0 +1,105 @@
+
+NOTE: Some information within this document may be outdated if it relates
+to what is currently on the PCB. The PCB is the most up-to-date. I will
+try to keep this document somewhat in sync though while working on the safety
+circuit.
+  - Jacoby
+
+From Jadon:
+  Part Selections:
+    Positive Voltage: 12 V
+    LED Selection:
+      Part Number: APG01SCGKKC-TT
+      Forward Voltage: 2.1V at 10 mA
+      Maximum Power Dissipation: 24 mW
+      Peak Forward Current: 40 mA
+      Resources:
+        Digikey: https://www.digikey.com/en/products/detail/kingbright/apg015cgkkc-tt/25981969
+        Datasheet: https://www.kingbrightusa.com/images/catalog/SPEC/APG015CGKKC-TT.pdf
+    Resistor Selection:
+      Part Number: 71-CRCW08051K00FKTAH
+      Resistance: 1k Ohms
+      With 12 V Voltage Across, dissipates (12 V)^2/(1k Ohms) = 144 mW
+      Current: (12 V)/(1 kOhms) ~= 12 mA
+      Resources:
+        # NOTE: Could not find the part number given by Jadon. Some Similar
+        parts found in terms of resistance are:
+        Resistors with same Base Product Number: https://www.digikey.com/en/products/base-product/vishay-dale/541/CRCW0805/468992
+        Similar Resistor:
+          Part Number: CRCW08051K00FKEA
+          Digikey: https://www.digikey.com/en/products/detail/vishay-dale/CRCW08051K00FKEA/1175637
+          Datasheet: https://www.vishay.com/docs/20035/dcrcwe3.pdf
+    NMOS Selection:
+      Part Number: 78-SQJ764ELP-TI_GE3
+      Resources:
+        Digikey: https://www.digikey.com/en/products/detail/vishay-siliconix/SQJ764ELP-T1-GE3/27788196
+        Datasheet(?): https://www.vishay.com/docs/62453/sqj764elp.pdf
+      Notes:
+        This is a Dual N-Channel MOSFET, even though the schematic and the odd
+        number of MOSFETs suggests that we want to use single N-Channel MOSFETs.
+        Therefore, I plan to choose a different surface mount NMOS - Jacoby
+
+
+    Connector:
+      Housing: 43046-0801
+        Full Part Name:
+          Micro-Fit 3.0 Right-Angle Header, 3.00mm Pitch, Dual Row, 8 Circuits,
+          with Snap-in Plastic Peg PCB Lock, Gold, Glow-Wire Capable, Black
+        Resources:
+          Molex: https://www.molex.com/en-us/products/part-detail/430450801
+      Receptacle: 0430250800
+        Full Part Name:
+          Micro-Fit 3.0 Receptacle Housing, Dual Row, 8 Circuits, UL 94V-0,
+          Low-Halogen, Black
+        Molex: https://www.molex.com/en-us/products/part-detail/430250800
+        Digikey: https://www.digikey.com/en/products/detail/molex/0430250800/252499
+
+  Miscellaneous Notes:
+    5 2pin Male + Female Connectors for all Conn_01x02_Socket connections (J1-J5)
+
+    4 1-pin conncetors: +12V, GND, Input, and Output
+
+Personal Comments and Suggestions:
+  Increasing Resistances on Resistors from NMOS gates to ground:
+    The resistors on the gates of the MOSFETs should be quite high, probably
+    on the order of megaohms, so that
+    they draw little current and, for a given voltage, draw little power (think
+    P = V^2/R. If we make R high and V is capped at 12V, then P will go extremely
+    low.)
+    I propose that we use the CRCW080510M0FKEA (details and datasheet below). It
+    has a resistance of 10 MOhms and a power rating of 250 mW. 
+    Part Data:
+      Part Number: CRCW080510M0FKEA
+      Resistance: 10 MOhms
+      Resources:
+        Digikey: https://www.digikey.com/en/products/detail/vishay-dale/CRCW080510M0FKEA/1176130
+        Datasheet: https://www.vishay.com/docs/20035/dcrcwe3.pdf
+  Change MOSFET to a Single 
+
+Questions:
+  Are the BOTS and OUTPUT nodes supposed to be the same node?
+  
+New LED Data:
+  Manufacturer: KingBright
+	Manufacturer Part Number: APG0603CGC-TT
+	Datasheet: https://www.kingbrightusa.com/images/catalog/SPEC/APG0603CGC-TT.pdf
+	JCL: https://jlcpcb.com/partdetail/Kingbright-APG0603CGCTT/C4153580
+	JCL Part Number: C4153580
+  NOTE: THIS LED IS TOO SMALL! A new LED must be picked.
+
+LED Competition Contestants:
+  https://jlcpcb.com/partdetail/23857064-PSC_1608U52GCG4/C22371297
+  it wins
+
+
+New NMOS data:
+	Part Number: 2N7002K-T1-GE3
+	JCL: https://jlcpcb.com/partdetail/VishayIntertech-2N7002K_T1GE3/C81445
+	Digikey: https://www.digikey.com/en/products/detail/vishay-siliconix/2N7002K-T1-GE3/2621521
+	Datasheet: https://www.vishay.com/docs/71333/2n7002k.pdf
+	Notes:
+		- Similarities to proposed part by Jadon
+			- Same threshold voltage (important)
+			- Same max Drain Source Voltage
+		- Differences to proposed part by Jadon
+			- Single MOSFET package instead of Dual MOSFET package
