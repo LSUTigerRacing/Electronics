@@ -1,0 +1,10 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-09042024-052366";"";
+"REFERENCE";"1053131202";"";
+"TraceParts.PartTitle";"Nano-Fit";"";
+"TraceParts.InstanceId";"90-09042024-0523662N3XX9WWY2MK673V115V3T3RA";"";
+"SUPPLIER";"Molex";"";
+"DESIGN";"Nano-Fit Right-Angle Header, Through Hole, 2.50mm Pitch, Single Row, 2 Circuits, 0.38µm Gold (Au) Plating, Black, Glow-Wire Capable, Tray";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.4";"";

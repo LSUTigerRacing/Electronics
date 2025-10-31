@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|133100000|100000000|30420881-f001-470f-8cdc-bfada45a6281|00000000-0000-0000-0000-000000000000",
+          "Take of silkscreen to have connector hang off edge"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -644,7 +649,7 @@
           "group_by": false,
           "label": "MFR Link",
           "name": "MFR Link",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,

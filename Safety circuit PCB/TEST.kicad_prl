@@ -16,17 +16,17 @@
       "zones": 0.6
     },
     "selection_filter": {
-      "dimensions": false,
-      "footprints": false,
-      "graphics": false,
-      "keepouts": false,
+      "dimensions": true,
+      "footprints": true,
+      "graphics": true,
+      "keepouts": true,
       "lockedItems": false,
-      "otherItems": false,
-      "pads": false,
-      "text": false,
-      "tracks": false,
+      "otherItems": true,
+      "pads": true,
+      "text": true,
+      "tracks": true,
       "vias": true,
-      "zones": false
+      "zones": true
     },
     "visible_items": [
       "vias",
@@ -116,15 +116,15 @@
   },
   "schematic": {
     "selection_filter": {
-      "graphics": false,
-      "images": false,
-      "labels": false,
+      "graphics": true,
+      "images": true,
+      "labels": true,
       "lockedItems": false,
       "otherItems": true,
-      "pins": false,
-      "symbols": false,
-      "text": false,
-      "wires": false
+      "pins": true,
+      "symbols": true,
+      "text": true,
+      "wires": true
     }
   }
 }
