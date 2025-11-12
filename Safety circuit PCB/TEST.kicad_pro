@@ -60,8 +60,8 @@
       ],
       "drc_exclusions": [
         [
-          "lib_footprint_mismatch|133100000|100000000|30420881-f001-470f-8cdc-bfada45a6281|00000000-0000-0000-0000-000000000000",
-          "Take of silkscreen to have connector hang off edge"
+          "lib_footprint_mismatch|110947200|96774000|ab453e12-afac-495b-8bae-a0135585878d|00000000-0000-0000-0000-000000000000",
+          "Silkscreen purposely removed from edge to alllow connector to hang off."
         ]
       ],
       "meta": {
@@ -508,7 +508,7 @@
       "plot": "Fabrication",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "TEST.step",
       "svg": "",
       "vrml": ""
     },
