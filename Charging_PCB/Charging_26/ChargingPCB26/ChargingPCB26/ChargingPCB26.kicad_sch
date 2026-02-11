@@ -14881,13 +14881,13 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GDS")
-		(at 364.49 210.82 270)
+		(at 364.49 210.82 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1fa52055-bfc8-4748-91cf-14497f3b631e")
 		(property "Reference" "Q4"
 			(at 364.49 217.17 90)
@@ -14906,7 +14906,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 367.03 215.9 0)
+			(at 361.95 215.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19408,13 +19408,13 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:Q_NMOS_GDS")
-		(at 304.8 207.01 270)
+		(at 304.8 207.01 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8b4b15d1-6433-40b1-b0c0-27a5e636f7a5")
 		(property "Reference" "Q3"
 			(at 304.8 213.36 90)
@@ -19433,7 +19433,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_THT:TO-251-3_Vertical"
-			(at 307.34 212.09 0)
+			(at 302.26 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
