@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SCWN06A-05
+D Isolated DC/DC Converters - Through Hole 6W 9-18Vin 5Vout 1000mA DIP24 Iso
+K
+F https://www.meanwell-web.com/content/files/pdfs/productPdfs/MW/SCWN06/SCWN06,DCWN06-spec.pdf
+$ENDCMP
+#
+#End Doc Library
