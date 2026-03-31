@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CD4027BE
+D CD4027BE, Dual J-K Type Flip Flop 3  18 V 16-Pin PDIP
+K
+F http://www.ti.com/lit/ds/symlink/cd4027b.pdf
+$ENDCMP
+#
+#End Doc Library

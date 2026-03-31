@@ -3,4 +3,5 @@
   (lib (name "LM7805")(type "KiCad")(uri "${KIPRJMOD}/DOWNLOADS/REGULATOR/LM7805.pretty")(options "")(descr ""))
   (lib (name "641964-1")(type "KiCad")(uri "${KIPRJMOD}/DOWNLOADS/CONN/KiCADv6/footprints.pretty/641964-1.pretty")(options "")(descr ""))
   (lib (name "DC-DC")(type "KiCad")(uri "${KIPRJMOD}/DOWNLOADS/ISOLATED_CONVERTER/KiCad/DC-DC.pretty")(options "")(descr ""))
+  (lib (name "1.Custom")(type "KiCad")(uri "${KIPRJMOD}/1.Custom.pretty")(options "")(descr ""))
 )
