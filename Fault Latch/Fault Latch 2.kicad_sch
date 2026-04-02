@@ -53471,7 +53471,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965_Pad_TopOnly"
 			(at 278.765 74.295 0)
 			(effects
 				(font
@@ -58650,7 +58650,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965_Pad_TopOnly"
 			(at 253.365 74.295 0)
 			(effects
 				(font
@@ -63600,7 +63600,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965_Pad_TopOnly"
 			(at 278.765 65.405 0)
 			(effects
 				(font
@@ -67097,7 +67097,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_DIN965_Pad_TopOnly"
 			(at 253.365 65.405 0)
 			(effects
 				(font
