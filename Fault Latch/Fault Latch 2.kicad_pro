@@ -754,6 +754,18 @@
           "label": "Digikey",
           "name": "Digikey",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser#",
+          "name": "Mouser#",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MFR#",
+          "name": "MFR#",
+          "show": false
         }
       ],
       "filter_string": "",

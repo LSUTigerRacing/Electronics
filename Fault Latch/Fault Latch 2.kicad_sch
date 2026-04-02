@@ -5238,11 +5238,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:PTVS5V0Z1USK"
+		(symbol "Diode:ESD9B5.0ST5G"
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
+				(offset 1.016)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -5256,7 +5257,7 @@
 					)
 				)
 			)
-			(property "Value" "PTVS5V0Z1USK"
+			(property "Value" "ESD9B5.0ST5G"
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -5264,16 +5265,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
-				(at 0 -4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+			(property "Footprint" "Diode_SMD:D_SOD-923"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5282,7 +5274,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5291,7 +5283,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "TVS diode"
+			(property "Description" "ESD protection diode, 5.0Vrwm, SOD-923"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5300,7 +5292,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "*DSN1608?2*"
+			(property "ki_keywords" "diode TVS ESD"
 				(at 0 0 0)
 				(effects
 					(font
@@ -5309,13 +5301,34 @@
 					(hide yes)
 				)
 			)
-			(symbol "PTVS5V0Z1USK_0_1"
+			(property "ki_fp_filters" "D*SOD?923*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ESD9B5.0ST5G_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+						(xy -2.54 -1.27) (xy 0 0) (xy -2.54 1.27) (xy -2.54 -1.27)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
+					)
+					(stroke
+						(width 0.2032)
 						(type default)
 					)
 					(fill
@@ -5336,10 +5349,10 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+						(xy 2.54 1.27) (xy 2.54 -1.27) (xy 0 0) (xy 2.54 1.27)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.2032)
 						(type default)
 					)
 					(fill
@@ -5347,11 +5360,11 @@
 					)
 				)
 			)
-			(symbol "PTVS5V0Z1USK_1_1"
+			(symbol "ESD9B5.0ST5G_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
-					(name "K"
+					(name "A1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5369,7 +5382,7 @@
 				(pin passive line
 					(at 3.81 0 180)
 					(length 2.54)
-					(name "A"
+					(name "A2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8502,7 +8515,7 @@
 		)
 		(uuid "c2a7e048-976f-4963-8514-5517a1b7a18e")
 	)
-	(text_box "IMD LIGHT"
+	(text_box "BSPD LIGHT"
 		(exclude_from_sim no)
 		(at 113.03 220.98 0)
 		(size 43.18 59.69)
@@ -9227,6 +9240,10 @@
 		(uuid "fc44a231-1131-4fc7-9143-8fcc6560bcb3")
 	)
 	(no_connect
+		(at 271.78 120.65)
+		(uuid "1265732a-e92e-4d4a-be23-a4618f862b79")
+	)
+	(no_connect
 		(at 392.43 245.11)
 		(uuid "3150b3d3-1c69-4401-a01c-14a3faa98966")
 	)
@@ -9237,6 +9254,10 @@
 	(no_connect
 		(at 193.04 181.61)
 		(uuid "5dc36aa5-e2de-468d-b891-739efd51c1de")
+	)
+	(no_connect
+		(at 302.26 128.27)
+		(uuid "7026608e-1ee9-4232-a753-36724a2c3d93")
 	)
 	(no_connect
 		(at 313.69 257.81)
@@ -9251,20 +9272,16 @@
 		(uuid "8ec463e1-5b0f-4c9b-bd3b-36e6d16a0c7d")
 	)
 	(no_connect
-		(at 302.26 130.81)
-		(uuid "96a774f0-8d60-461f-a752-cfe786130711")
-	)
-	(no_connect
-		(at 271.78 105.41)
-		(uuid "abb8bd49-3247-43e6-9d1b-1f96c7556663")
-	)
-	(no_connect
 		(at 193.04 133.35)
 		(uuid "b7d7517b-5927-4ec1-b4c6-cfda60345c8a")
 	)
 	(no_connect
 		(at 499.11 59.69)
 		(uuid "b97303d1-f4e7-408d-834f-fcd7cc83bba9")
+	)
+	(no_connect
+		(at -1.27 190.5)
+		(uuid "bc7f2ebf-1860-426b-8ea2-7c0b2f93f967")
 	)
 	(no_connect
 		(at 483.87 62.23)
@@ -9897,16 +9914,6 @@
 	)
 	(wire
 		(pts
-			(xy 289.56 110.49) (xy 302.26 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27accc27-c8f0-4d65-b839-e7553eaeab18")
-	)
-	(wire
-		(pts
 			(xy 73.66 102.87) (xy 92.71 102.87)
 		)
 		(stroke
@@ -10017,7 +10024,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 262.89) (xy 237.49 275.59)
+			(xy 237.49 255.27) (xy 237.49 265.43)
 		)
 		(stroke
 			(width 0)
@@ -10238,16 +10245,6 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 120.65) (xy 271.78 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3da93e1f-19b9-449a-bc27-5714b3af4ffe")
-	)
-	(wire
-		(pts
 			(xy 124.46 59.69) (xy 124.46 63.5)
 		)
 		(stroke
@@ -10285,16 +10282,6 @@
 			(type default)
 		)
 		(uuid "3fba7ddd-9aea-43a0-8d52-9e16a47607f2")
-	)
-	(wire
-		(pts
-			(xy 251.46 115.57) (xy 271.78 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4030eff0-4712-4509-b51c-41a0e83c6dd4")
 	)
 	(wire
 		(pts
@@ -10465,16 +10452,6 @@
 			(type default)
 		)
 		(uuid "51f8c3c5-dccc-4e89-ae54-0e47ef79a680")
-	)
-	(wire
-		(pts
-			(xy 237.49 229.87) (xy 237.49 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5220168c-69d7-43e6-877c-fbde0311d1a6")
 	)
 	(wire
 		(pts
@@ -11188,6 +11165,16 @@
 	)
 	(wire
 		(pts
+			(xy 251.46 105.41) (xy 271.78 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "874c270f-c380-489f-8568-e20ba7ba7e83")
+	)
+	(wire
+		(pts
 			(xy 166.37 148.59) (xy 166.37 144.78)
 		)
 		(stroke
@@ -11295,16 +11282,6 @@
 			(type default)
 		)
 		(uuid "8e9e69bd-7af3-4116-899c-38c543573fcc")
-	)
-	(wire
-		(pts
-			(xy 328.93 160.02) (xy 328.93 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ed37cf0-0f23-4e93-9673-3586de22ffcf")
 	)
 	(wire
 		(pts
@@ -11719,6 +11696,16 @@
 	)
 	(wire
 		(pts
+			(xy 328.93 185.42) (xy 328.93 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6b442a9-ab16-4850-9069-d7191b7e0c2a")
+	)
+	(wire
+		(pts
 			(xy 139.7 151.13) (xy 153.67 151.13)
 		)
 		(stroke
@@ -11979,6 +11966,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 273.05) (xy 237.49 275.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9dcad87-8e77-41df-a422-4ab333fa1b1c")
+	)
+	(wire
+		(pts
 			(xy 33.02 111.76) (xy 33.02 114.3)
 		)
 		(stroke
@@ -12036,6 +12033,16 @@
 			(type default)
 		)
 		(uuid "be40f0b2-de98-4920-b406-dc53b485d19d")
+	)
+	(wire
+		(pts
+			(xy 287.02 110.49) (xy 302.26 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0cfb7a0-02c0-427d-9e18-637009274f0d")
 	)
 	(wire
 		(pts
@@ -12279,16 +12286,6 @@
 	)
 	(wire
 		(pts
-			(xy 302.26 128.27) (xy 289.56 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cee7871e-f9a9-4a07-9eda-7b6453e410da")
-	)
-	(wire
-		(pts
 			(xy 63.5 81.28) (xy 63.5 82.55)
 		)
 		(stroke
@@ -12379,7 +12376,7 @@
 	)
 	(wire
 		(pts
-			(xy 328.93 180.34) (xy 328.93 186.69)
+			(xy 328.93 173.99) (xy 328.93 177.8)
 		)
 		(stroke
 			(width 0)
@@ -12426,6 +12423,16 @@
 			(type default)
 		)
 		(uuid "d342b786-fc7c-4219-8d27-f545ec789940")
+	)
+	(wire
+		(pts
+			(xy 247.65 115.57) (xy 271.78 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d38897c5-02ea-4e20-bdaf-f8cd8da6755b")
 	)
 	(wire
 		(pts
@@ -12656,16 +12663,6 @@
 			(type default)
 		)
 		(uuid "e4034d4c-9b06-4efa-b919-1ed5c564adc7")
-	)
-	(wire
-		(pts
-			(xy 237.49 238.76) (xy 237.49 243.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4d1bda9-6051-4406-b3c8-1078659ac608")
 	)
 	(wire
 		(pts
@@ -12966,6 +12963,16 @@
 			(type default)
 		)
 		(uuid "fb9483cf-b994-439f-b524-d300bd93674b")
+	)
+	(wire
+		(pts
+			(xy 302.26 130.81) (xy 289.56 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbe4ebfd-16f9-4235-86e5-357592cff657")
 	)
 	(wire
 		(pts
@@ -19469,7 +19476,7 @@
 		)
 	)
 	(image
-		(at 237.49 254)
+		(at 237.49 247.65)
 		(uuid "71cb7374-b6ed-4c5b-b16b-8db9becfd78e")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAAAA3NCSVQICAjb4U/gAAAQ6UlEQVR4"
 			"nO3dXUwUZ9sH8Jn9YFYRWiuyEPtBUUFQBJZ6oKHQaDQRNbURJW086od7Qmi0qT1pTEPqgU27NbbN"
@@ -24432,7 +24439,7 @@
 		)
 	)
 	(image
-		(at 328.93 173.99)
+		(at 328.93 167.64)
 		(uuid "b97dbe2b-fc48-449b-a661-6000fd67afea")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAAAA3NCSVQICAjb4U/gAAAQ6UlEQVR4"
 			"nO3dXUwUZ9sH8Jn9YFYRWiuyEPtBUUFQBJZ6oKHQaDQRNbURJW086od7Qmi0qT1pTEPqgU27NbbN"
@@ -35557,7 +35564,7 @@
 		)
 		(uuid "0f85b8cc-a5c5-496d-b833-8c4aba96f9bf")
 	)
-	(label "Shutdown Circuit Out"
+	(label "BMS"
 		(at 251.46 102.87 0)
 		(effects
 			(font
@@ -35566,6 +35573,16 @@
 			(justify left bottom)
 		)
 		(uuid "118bbb58-2181-4360-a557-ce86e943e779")
+	)
+	(label "BSPD Light -"
+		(at 251.46 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1593be4f-be58-4581-8024-3e77a3d7a5d2")
 	)
 	(label "NBPSD_LV"
 		(at 106.68 201.93 0)
@@ -35637,8 +35654,8 @@
 		)
 		(uuid "2a822cff-4b14-4d1e-b3f1-c0390b179c3a")
 	)
-	(label "TSSI Green Out"
-		(at 237.49 262.89 0)
+	(label "TSSI Green -"
+		(at 237.49 255.27 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -35677,7 +35694,7 @@
 		)
 		(uuid "3cc817a3-d0f7-4fe1-a34a-c72ff3ba45b4")
 	)
-	(label "BMS"
+	(label "Shutdown Circuit In"
 		(at 251.46 128.27 0)
 		(effects
 			(font
@@ -35767,17 +35784,7 @@
 		)
 		(uuid "679c8416-e238-45ea-9e13-c15cd0e00599")
 	)
-	(label "BSPD"
-		(at 289.56 128.27 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6af39f80-1a4d-44cf-97fb-30d2281b3922")
-	)
-	(label "Shutdown Circuit In"
+	(label "IMD"
 		(at 251.46 118.11 0)
 		(effects
 			(font
@@ -35826,16 +35833,6 @@
 			(justify left bottom)
 		)
 		(uuid "81f3c179-8340-4360-b750-2b675f8c7b79")
-	)
-	(label "TSSI Red In"
-		(at 328.93 165.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "82baf8d9-a2da-4384-ad87-7afc25db9f01")
 	)
 	(label "CLOCK"
 		(at 266.7 194.31 0)
@@ -35947,7 +35944,7 @@
 		)
 		(uuid "b48ca412-9184-4c21-a212-faab3ca516d7")
 	)
-	(label "IMD"
+	(label "Shutdown Circuit Out"
 		(at 251.46 113.03 0)
 		(effects
 			(font
@@ -35957,8 +35954,8 @@
 		)
 		(uuid "b589be51-65fd-4044-962d-01db482331a6")
 	)
-	(label "TSSI Red Out"
-		(at 328.93 180.34 0)
+	(label "TSSI Red -"
+		(at 328.93 173.99 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -35986,6 +35983,16 @@
 			(justify left bottom)
 		)
 		(uuid "bebafa50-4eb2-4a59-bee7-4f9e76c2d3a1")
+	)
+	(label "BSPD"
+		(at 289.56 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c0df175d-f508-4152-bdd6-858689e9a7ed")
 	)
 	(label "BSPD_SR"
 		(at 162.56 204.47 180)
@@ -36027,16 +36034,6 @@
 		)
 		(uuid "d11d90e1-cea8-476a-896f-dd028e42f508")
 	)
-	(label "TSSI Green In"
-		(at 237.49 243.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d4237e9d-6216-4902-8d65-55581745632c")
-	)
 	(label "BSPD Button -"
 		(at 190.5 52.07 180)
 		(effects
@@ -36076,16 +36073,6 @@
 			(justify left bottom)
 		)
 		(uuid "dc9432d8-9153-4653-bf19-9adf41481a17")
-	)
-	(label "BSPD Light -"
-		(at 251.46 120.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e2be435a-52c1-4cf8-a3f9-23a5de740cef")
 	)
 	(label "TSSI Green -"
 		(at 251.46 110.49 0)
@@ -36982,6 +36969,71 @@
 			(project "Fault Latch 2"
 				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
 					(reference "#PWR0142")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 247.65 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "12087540-e033-4650-922e-096842319f06")
+		(property "Reference" "#PWR034"
+			(at 247.65 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 247.65 110.744 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 247.65 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "95efc234-dce6-4c0e-b283-91b94294f311")
+		)
+		(instances
+			(project "Fault Latch 2"
+				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -39458,6 +39510,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:ESD9B5.0ST5G")
+		(at 45.72 203.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29581b3a-0c80-4d24-8be6-1a870bdb0d20")
+		(property "Reference" "D3"
+			(at 48.26 201.9299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Bi-TVS Diode"
+			(at 51.816 208.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-523"
+			(at 45.72 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589811225703325696"
+			(at 45.72 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "-40℃~+125℃ 12V 12pF 17V 25V 25W@8/20us 2uA 5A@8/20us Bidirectional ESD IEC 61000-4-2 SOD-523F(0603) ESD and Surge Protection (TVS/ESD) ROHS"
+			(at 45.72 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC#" "C2443698"
+			(at 45.72 203.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser#" " 750-CPDUR12V-HF "
+			(at 45.72 203.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR#" " CPDUR12V-HF "
+			(at 45.72 203.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "09ab8c12-a275-4d91-8641-74887d4f4596")
+		)
+		(pin "2"
+			(uuid "f4afc520-4c5d-44a8-8e84-24462aebb874")
+		)
+		(instances
+			(project "Fault Latch 2"
+				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 153.67 204.47 180)
 		(unit 1)
@@ -39998,76 +40146,6 @@
 			(project "Fault Latch 2"
 				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:PTVS5V0Z1USK")
-		(at 45.72 154.94 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3015f28b-c5d3-47e7-993f-0d1bc9d3a637")
-		(property "Reference" "D2"
-			(at 44.196 153.162 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TVS Diode"
-			(at 51.816 151.384 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
-			(at 50.165 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
-			(at 45.72 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
-			(at 45.72 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "8573d141-49be-4b57-b695-1ddc339b51dc")
-		)
-		(pin "1"
-			(uuid "26122bcb-f570-4bc8-a3dc-918a30ff90d5")
-		)
-		(instances
-			(project "Fault Latch 2"
-				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
-					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -42430,72 +42508,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 328.93 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4d8036e9-fcc9-45a3-bec3-2ebaaf788d4a")
-		(property "Reference" "#PWR0165"
-			(at 328.93 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 322.58 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 328.93 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 328.93 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 328.93 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "50f4831f-7e75-47ee-b880-b9e68cbc3004")
-		)
-		(instances
-			(project "Fault Latch 2"
-				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
-					(reference "#PWR0165")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 39.37 257.81 0)
 		(mirror y)
@@ -43282,73 +43294,6 @@
 			(project "Fault Latch 2"
 				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
 					(reference "R136")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "+5V_1")
-		(lib_id "power:+5V")
-		(at 237.49 229.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "52a4cda2-bf53-4818-aeed-e2874097ad02")
-		(property "Reference" "#PWR0154"
-			(at 237.49 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 237.49 224.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 237.49 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 237.49 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 237.49 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ccb21589-08ca-4ffc-bfd1-7b875ae2a421")
-		)
-		(instances
-			(project "Fault Latch 2"
-				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
-					(reference "#PWR0154")
 					(unit 1)
 				)
 			)
@@ -49671,6 +49616,102 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:ESD9B5.0ST5G")
+		(at 45.72 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7d852ecf-fb62-4f04-8627-62f5548a3570")
+		(property "Reference" "D2"
+			(at 48.26 153.6699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Bi-TVS Diode"
+			(at 52.07 159.258 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-523"
+			(at 45.72 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589811225703325696"
+			(at 45.72 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "-40℃~+125℃ 12V 12pF 17V 25V 25W@8/20us 2uA 5A@8/20us Bidirectional ESD IEC 61000-4-2 SOD-523F(0603) ESD and Surge Protection (TVS/ESD) ROHS"
+			(at 45.72 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC#" "C2443698"
+			(at 45.72 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser#" " 750-CPDUR12V-HF "
+			(at 45.72 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR#" " CPDUR12V-HF "
+			(at 45.72 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8e6ea61-62be-4a64-b450-b28b99928540")
+		)
+		(pin "2"
+			(uuid "ed593662-6593-4ca2-9f63-add738588ed1")
+		)
+		(instances
+			(project "Fault Latch 2"
+				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 40.64 203.2 0)
 		(unit 1)
@@ -55006,16 +55047,16 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 237.49 234.95 180)
+		(at 328.93 181.61 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9d984eba-70b6-49e4-9ddd-b40f245575e7")
-		(property "Reference" "R130"
-			(at 240.03 233.6799 0)
+		(uuid "9d71cdcc-8d21-452b-a248-9a4df7415f9b")
+		(property "Reference" "R150"
+			(at 331.47 180.3399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55024,7 +55065,7 @@
 			)
 		)
 		(property "Value" "270R"
-			(at 240.03 236.2199 0)
+			(at 331.47 182.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55033,7 +55074,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
-			(at 236.474 234.696 90)
+			(at 327.914 181.356 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55042,7 +55083,7 @@
 			)
 		)
 		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8558359556762984448"
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55051,7 +55092,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55060,7 +55101,7 @@
 			)
 		)
 		(property "JLC#" "C230144"
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55069,7 +55110,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55077,7 +55118,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55085,7 +55126,7 @@
 			)
 		)
 		(property "MOUSER" "AC1210FR-07270RL"
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55094,7 +55135,7 @@
 			)
 		)
 		(property "Height" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55102,7 +55143,7 @@
 			)
 		)
 		(property "Manufacturer_Name" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55110,7 +55151,7 @@
 			)
 		)
 		(property "Mouser Part Number" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55118,7 +55159,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55126,7 +55167,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55134,7 +55175,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55142,7 +55183,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55150,7 +55191,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55158,7 +55199,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55166,7 +55207,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55174,7 +55215,7 @@
 			)
 		)
 		(property "OC_FARNELL" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55182,7 +55223,7 @@
 			)
 		)
 		(property "OC_NEWARK" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55190,7 +55231,7 @@
 			)
 		)
 		(property "PACKAGE" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55198,7 +55239,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55206,7 +55247,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55214,7 +55255,7 @@
 			)
 		)
 		(property "SUPPLIER" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55222,7 +55263,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55230,7 +55271,255 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" ""
-			(at 237.49 234.95 0)
+			(at 328.93 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3746173a-3d0e-4358-b5af-266613ceab8c")
+		)
+		(pin "1"
+			(uuid "8c2120ee-f455-48e8-9f69-c3909190cf8e")
+		)
+		(instances
+			(project "Fault Latch 2"
+				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
+					(reference "R150")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 237.49 269.24 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d984eba-70b6-49e4-9ddd-b40f245575e7")
+		(property "Reference" "R130"
+			(at 240.03 267.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "270R"
+			(at 240.03 270.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
+			(at 236.474 268.986 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8558359556762984448"
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC#" "C230144"
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MOUSER" "AC1210FR-07270RL"
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Availability" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Check_prices" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description_1" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MF" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "OC_FARNELL" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "OC_NEWARK" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PACKAGE" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Price" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SUPPLIER" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 237.49 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" ""
+			(at 237.49 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59312,17 +59601,25 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:PTVS5V0Z1USK")
+		(lib_id "Diode:ESD9B5.0ST5G")
 		(at 33.02 107.95 90)
-		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c67de11f-ccc1-4337-b804-114bb16ddb0b")
+		(uuid "c68dd19d-7129-4bb2-a90f-54a424f91a64")
 		(property "Reference" "D1"
-			(at 30.48 106.6799 90)
+			(at 35.56 106.6799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Bi-TVS Diode"
+			(at 32.004 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59330,25 +59627,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TVS Diode"
-			(at 30.48 109.2199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
-			(at 37.465 107.95 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
+		(property "Footprint" "Diode_SMD:D_SOD-523"
 			(at 33.02 107.95 0)
 			(effects
 				(font
@@ -59357,7 +59636,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589811225703325696"
 			(at 33.02 107.95 0)
 			(effects
 				(font
@@ -59366,14 +59645,50 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "24e40b6c-7f43-430d-96da-977fd837c3c9")
+		(property "Description" "-40℃~+125℃ 12V 12pF 17V 25V 25W@8/20us 2uA 5A@8/20us Bidirectional ESD IEC 61000-4-2 SOD-523F(0603) ESD and Surge Protection (TVS/ESD) ROHS"
+			(at 33.02 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC#" "C2443698"
+			(at 33.02 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser#" " 750-CPDUR12V-HF "
+			(at 33.02 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFR#" " CPDUR12V-HF "
+			(at 33.02 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "1"
-			(uuid "763bf9dc-4e63-423b-b994-ab77b0cd3a0f")
+			(uuid "cab0de90-dafc-41a2-8fc1-0038e346b909")
+		)
+		(pin "2"
+			(uuid "40701e36-af02-4b5c-9a31-353b4ccc06a3")
 		)
 		(instances
-			(project ""
+			(project "Fault Latch 2"
 				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
 					(reference "D1")
 					(unit 1)
@@ -64375,6 +64690,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 287.02 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e7a23868-f48f-4f45-b701-1ca714d1ecfa")
+		(property "Reference" "#PWR038"
+			(at 287.02 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 287.02 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 287.02 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "db5326bd-a785-412d-a1d4-e8c73992bdfc")
+		)
+		(instances
+			(project "Fault Latch 2"
+				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 300.99 281.94 0)
 		(unit 1)
@@ -64962,76 +65342,6 @@
 			(project "Fault Latch 2"
 				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
 					(reference "R110")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:PTVS5V0Z1USK")
-		(at 45.72 203.2 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ebfb2339-0dbe-4a08-8765-06619eb0dd71")
-		(property "Reference" "D3"
-			(at 44.196 201.422 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TVS Diode"
-			(at 51.816 199.644 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:Nexperia_DSN1608-2_1.6x0.8mm"
-			(at 50.165 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PTVS5V0Z1USK.pdf"
-			(at 45.72 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "5V, 1200W TVS unidirectional diode, DSN1608-2"
-			(at 45.72 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9d6d54bd-9ce7-428e-bc6a-6b1899cee3b7")
-		)
-		(pin "1"
-			(uuid "9d140294-8585-4c1d-8f74-4bbbd4e69c5f")
-		)
-		(instances
-			(project "Fault Latch 2"
-				(path "/478dd61d-7d78-47ee-b0a2-413879fe7325"
-					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -66522,7 +66832,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1210_3225Metric"
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 			(at 41.656 155.194 90)
 			(effects
 				(font
