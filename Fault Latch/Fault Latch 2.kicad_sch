@@ -36856,6 +36856,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLC#" "C2902"
+			(at 100.33 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SN74HC00N"
+			(at 100.33 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "296-1563-5-ND"
+			(at 100.33 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "007746ab-437a-4fc4-b4b2-4d1341747288")
 		)
@@ -38146,6 +38173,33 @@
 			)
 		)
 		(property "Description" "quad 2-input NAND gate"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC#" "C2902"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SN74HC00N"
+			(at 100.33 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "296-1563-5-ND"
 			(at 100.33 100.33 0)
 			(effects
 				(font
@@ -40983,7 +41037,7 @@
 				)
 			)
 		)
-		(property "JLC#" "C556297"
+		(property "JLC#" " C41430933"
 			(at 124.46 151.13 0)
 			(effects
 				(font
@@ -47940,7 +47994,7 @@
 				)
 			)
 		)
-		(property "JLC#" "C556297"
+		(property "JLC#" " C41430933"
 			(at 441.96 35.56 0)
 			(effects
 				(font
@@ -48902,7 +48956,7 @@
 				)
 			)
 		)
-		(property "JLC#" "C556297"
+		(property "JLC#" " C41430933"
 			(at 124.46 102.87 0)
 			(effects
 				(font
@@ -54979,7 +55033,7 @@
 				)
 			)
 		)
-		(property "JLC#" "C556297"
+		(property "JLC#" " C41430933"
 			(at 491.49 59.69 0)
 			(effects
 				(font
@@ -57756,6 +57810,33 @@
 				(hide yes)
 			)
 		)
+		(property "JLC#" "C2902"
+			(at 100.33 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SN74HC00N"
+			(at 100.33 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "296-1563-5-ND"
+			(at 100.33 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "007746ab-437a-4fc4-b4b2-4d134174728a")
 		)
@@ -58319,7 +58400,7 @@
 				)
 			)
 		)
-		(property "JLC#" "C556297"
+		(property "JLC#" " C41430933"
 			(at 124.46 199.39 0)
 			(effects
 				(font
@@ -63202,6 +63283,33 @@
 			)
 		)
 		(property "Description" "quad 2-input NAND gate"
+			(at 412.75 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC#" "C2902"
+			(at 412.75 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SN74HC00N"
+			(at 412.75 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "296-1563-5-ND"
 			(at 412.75 34.29 0)
 			(effects
 				(font
@@ -68127,6 +68235,33 @@
 			)
 		)
 		(property "Description" "quad 2-input NAND gate"
+			(at 260.35 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC#" "C2902"
+			(at 260.35 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "SN74HC00N"
+			(at 260.35 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigiKey" "296-1563-5-ND"
 			(at 260.35 189.23 0)
 			(effects
 				(font

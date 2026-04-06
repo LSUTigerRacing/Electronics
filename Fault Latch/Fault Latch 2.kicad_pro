@@ -531,7 +531,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "Gerber/",
+      "plot": "C:/Users/emili/OneDrive/Desktop/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -765,6 +765,12 @@
           "group_by": false,
           "label": "MFR#",
           "name": "MFR#",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DigiKey",
+          "name": "DigiKey",
           "show": false
         }
       ],
