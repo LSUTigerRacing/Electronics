@@ -104,7 +104,6 @@
 			(psnegative no)
 			(psa4output no)
 			(plot_black_and_white yes)
-			(plotinvisibletext no)
 			(sketchpadsonfab no)
 			(plotpadnumbers no)
 			(hidednponfab no)
@@ -4502,7 +4501,7 @@
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 2.2 2.2)
-			(drill 2.2)
+			(drill 4.3)
 			(layers "*.Cu" "*.Mask")
 			(uuid "ced342ce-1dab-427d-982b-cbb8fe4178ab")
 		)
@@ -10404,8 +10403,8 @@
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0)
-			(size 2.2 2.2)
-			(drill 2.2)
+			(size 4.3 4.3)
+			(drill 4.3)
 			(layers "*.Cu" "*.Mask")
 			(uuid "c3ac4851-1aab-4c33-837b-2c6d2e6e866c")
 		)
@@ -14193,7 +14192,7 @@
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 2.2 2.2)
-			(drill 2.2)
+			(drill 4.3)
 			(layers "*.Cu" "*.Mask")
 			(uuid "804100d5-17ca-432d-84c4-74f91e30d160")
 		)
@@ -17189,7 +17188,7 @@
 		(pad "" np_thru_hole circle
 			(at 0 0)
 			(size 2.2 2.2)
-			(drill 2.2)
+			(drill 4.3)
 			(layers "*.Cu" "*.Mask")
 			(uuid "9e043189-036b-4379-a5d7-eec765cf96cb")
 		)
