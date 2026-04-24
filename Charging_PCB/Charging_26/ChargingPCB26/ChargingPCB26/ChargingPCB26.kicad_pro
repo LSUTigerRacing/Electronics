@@ -506,7 +506,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../PCBModal26/BoardStepfiles/ChargingPCB26.step",
       "svg": "",
       "vrml": ""
     },

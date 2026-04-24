@@ -490,7 +490,7 @@
       "plot": "./",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "BPSD-2025.step",
+      "step": "../../../PCBModal26/BoardStepfiles/BPSD-2025.step",
       "svg": "",
       "vrml": ""
     },

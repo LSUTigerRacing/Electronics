@@ -534,7 +534,7 @@
       "plot": "C:/Users/emili/OneDrive/Desktop/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../PCBModal26/BoardStepfiles/Fault Latch 2.step",
       "svg": "",
       "vrml": ""
     },

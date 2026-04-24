@@ -505,7 +505,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "Discharge26.step",
+      "step": "../../PCBModal26/BoardStepfiles/Discharge26.step",
       "svg": "",
       "vrml": ""
     },

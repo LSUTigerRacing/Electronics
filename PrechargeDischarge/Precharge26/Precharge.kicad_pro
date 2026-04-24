@@ -814,7 +814,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "Precharge the fat way.step",
+      "step": "../../PCBModal26/BoardStepfiles/Precharge the fat way.step",
       "svg": "",
       "vrml": ""
     },
