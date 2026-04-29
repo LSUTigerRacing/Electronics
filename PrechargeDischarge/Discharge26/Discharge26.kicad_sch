@@ -772,189 +772,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:LED"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LED"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Light emitting diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "LED diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "LED_0_1"
-				(polyline
-					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "LED_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_US"
 			(pin_numbers
 				(hide yes)
@@ -2117,18 +1934,6 @@
 		(color 0 0 0 0)
 		(uuid "75b77761-0efd-4738-9c6e-1d21593cadc2")
 	)
-	(junction
-		(at 86.36 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7a4a0ba6-acb9-4cd1-8bef-253f45c3f43c")
-	)
-	(junction
-		(at 120.65 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9cc27232-1039-499d-a8a3-b7dc31bbe487")
-	)
 	(no_connect
 		(at 97.79 119.38)
 		(uuid "13ab8e93-3164-4823-9c91-129b46c1648b")
@@ -2140,16 +1945,6 @@
 	(no_connect
 		(at 54.61 52.07)
 		(uuid "771080c5-bef9-44f5-b7a3-26f430c43406")
-	)
-	(wire
-		(pts
-			(xy 86.36 95.25) (xy 96.52 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12553357-7d79-4684-bd49-be92391b11fa")
 	)
 	(wire
 		(pts
@@ -2213,7 +2008,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 95.25) (xy 86.36 82.55)
+			(xy 86.36 95.25) (xy 86.36 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2230,16 +2025,6 @@
 			(type default)
 		)
 		(uuid "27655acc-3684-49d2-b2a3-8770c7847f0a")
-	)
-	(wire
-		(pts
-			(xy 120.65 95.25) (xy 120.65 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38ce64da-f3ca-426d-849d-7888fe5b9545")
 	)
 	(wire
 		(pts
@@ -2283,7 +2068,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 82.55) (xy 120.65 82.55)
+			(xy 109.22 95.25) (xy 120.65 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2373,17 +2158,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 95.25) (xy 120.65 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9422d3c3-6e35-4281-9fdb-146cf6c87c40")
-	)
-	(wire
-		(pts
-			(xy 86.36 82.55) (xy 101.6 82.55)
+			(xy 86.36 95.25) (xy 101.6 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2410,16 +2185,6 @@
 			(type default)
 		)
 		(uuid "b7bc7cc9-3387-4927-8eb0-61b8d2360ce2")
-	)
-	(wire
-		(pts
-			(xy 86.36 106.68) (xy 86.36 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bdddd0b8-a3b1-4bac-924b-a8c366a6a30d")
 	)
 	(wire
 		(pts
@@ -2483,7 +2248,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 82.55) (xy 120.65 95.25)
+			(xy 120.65 95.25) (xy 120.65 106.68)
 		)
 		(stroke
 			(width 0)
@@ -2500,16 +2265,6 @@
 			(type default)
 		)
 		(uuid "dd1e7911-dc68-4121-81e6-39fc201551a7")
-	)
-	(wire
-		(pts
-			(xy 104.14 95.25) (xy 105.41 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fca797be-411d-499b-b205-3beb78f11fb1")
 	)
 	(image
 		(at 253.365 79.375)
@@ -9288,93 +9043,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 100.33 95.25 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0b65de54-aefa-41e3-8eaa-95d315429c2e")
-		(property "Reference" "R1"
-			(at 99.0599 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2k"
-			(at 99.06 98.044 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 100.584 94.234 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/YAGEO-RT0805FRE072KL/C136896"
-			(at 100.33 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 100.33 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" " C136896"
-			(at 100.33 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR" ""
-			(at 100.33 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "8933ac50-40d6-4932-90e3-7a1f0cdf1f4c")
-		)
-		(pin "1"
-			(uuid "8df70c48-9700-4882-9fac-f99f51100bb8")
-		)
-		(instances
-			(project ""
-				(path "/62b6171b-8267-4c49-8a4b-dd9e7963cbfb"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 38.735 67.31 0)
 		(unit 1)
@@ -10089,93 +9757,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 109.22 95.25 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "81d53964-a91e-405d-aace-347539101716")
-		(property "Reference" "D2"
-			(at 108.204 92.456 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_DischargeOFF"
-			(at 102.616 98.552 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 109.22 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8550724080677908480"
-			(at 109.22 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 109.22 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 109.22 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "C84256"
-			(at 109.22 95.25 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "3967ac82-bcb0-4870-8393-c1842881fb06")
-		)
-		(pin "1"
-			(uuid "c811b0e2-c46f-46fb-9271-26b0136b9ec0")
-		)
-		(instances
-			(project ""
-				(path "/62b6171b-8267-4c49-8a4b-dd9e7963cbfb"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Zener")
 		(at 67.31 102.87 270)
 		(unit 1)
@@ -10364,7 +9945,7 @@
 	)
 	(symbol
 		(lib_id "Device:D")
-		(at 105.41 82.55 180)
+		(at 105.41 95.25 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10372,7 +9953,7 @@
 		(dnp no)
 		(uuid "b5360278-e48f-4db9-bc83-4dcaa7a5b636")
 		(property "Reference" "D1"
-			(at 105.41 88.0364 0)
+			(at 105.41 100.7364 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10380,7 +9961,7 @@
 			)
 		)
 		(property "Value" "Schottky"
-			(at 105.41 85.725 0)
+			(at 105.41 98.425 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10388,7 +9969,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10397,7 +9978,7 @@
 			)
 		)
 		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8586172667489079296"
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10406,7 +9987,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10414,7 +9995,7 @@
 			)
 		)
 		(property "JLC" "C8678"
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10423,7 +10004,7 @@
 			)
 		)
 		(property "MFR" " SS34"
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10432,7 +10013,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10441,7 +10022,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10450,7 +10031,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10459,7 +10040,7 @@
 			)
 		)
 		(property "JLC#" ""
-			(at 105.41 82.55 0)
+			(at 105.41 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
