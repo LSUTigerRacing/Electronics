@@ -1,0 +1,179 @@
+(footprint "Q_Wurth_WL-OCPT_LSOP4-STANDARD"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "LSOP-4, body 7.6x3.6x2.1mm, https://www.we-online.com/en/components/products/WL-OCPT_PACKAGE_LSOP-4#/articles/")
+	(tags "SMT")
+	(property "Reference" "REF**"
+		(at 0 -3.05 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "c8fe4746-7d33-4b72-9240-8a21d4c18eb8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Q_Wurth_WL-OCPT_LSOP4-STANDARD"
+		(at 0 3.05 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "64b6d401-2713-475e-9dd1-8c1777074298")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d709261e-69fc-440d-8aba-65c685f228ab")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9654e941-fa9f-4e83-b687-ba5d4c827d42")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5.635 -1.72)
+		(end -5.635 -0.82)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3d59ccef-38cd-46c0-a183-5bc8757dcad0")
+	)
+	(fp_rect
+		(start -3.91 -1.91)
+		(end 3.91 1.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "358e0523-64eb-4512-8e11-1fec3c319623")
+	)
+	(fp_rect
+		(start -5.55 -2.05)
+		(end 5.55 2.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "04cbec4c-6935-45af-9742-dc2eca9b8ea6")
+	)
+	(fp_line
+		(start -3.8 -1.72)
+		(end -4.34 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5f041107-ee17-4a0b-bf3a-2b464c5871db")
+	)
+	(fp_line
+		(start -3.8 -0.82)
+		(end -4.34 -1.27)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a5b9397e-7dc2-4773-abf4-2d08ef670388")
+	)
+	(fp_line
+		(start -3.8 1.8)
+		(end 3.8 1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b63b3530-c197-48ab-8c42-ea9049fda2c2")
+	)
+	(fp_rect
+		(start -3.8 -1.8)
+		(end 3.8 1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "307a888d-87a3-47ff-9940-9de9be824e03")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "69cee6dc-a1ec-4af4-9173-0b9642579b5b")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.75 -1.27)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "dc52fb20-3e3c-4898-9fda-1875396a64b8")
+	)
+	(pad "2" smd rect
+		(at -4.75 1.27)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5773a583-c341-4f00-9135-d7a7cdfad240")
+	)
+	(pad "3" smd rect
+		(at 4.75 1.27)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a975235f-c980-4e42-80db-7f8fc8553a38")
+	)
+	(pad "4" smd rect
+		(at 4.75 -1.27)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "92eb5d98-f816-469e-9fdf-ffcfc672d08a")
+	)
+	(embedded_fonts no)
+	(model "${WE_3DMODEL_DIR}/Transistor_SMD_Wurth.3dshapes/Q_Wurth_WL-OCPT_LSOP4-STANDARD.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

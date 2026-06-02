@@ -1,0 +1,172 @@
+(footprint "CAPC6050X550N"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "5750 stacked")
+	(tags "Capacitor")
+	(property "Reference" "C**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "9e19839d-41cb-4b22-947a-346c52a7b218")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "CAPC6050X550N"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "3201a4c4-7a66-49c1-827e-f5a3b3940971")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3a2b122a-27e0-4b93-9aac-65b2de15256f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "81882817-1dbc-4fbf-bab4-d4a47e2b4bc2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0 -2.4)
+		(end 0 2.4)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "045c3420-fa06-4b68-a27f-25cf33a3583c")
+	)
+	(fp_line
+		(start -3.605 -2.91)
+		(end 3.605 -2.91)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "c598c301-ac3b-4418-937a-cb7bca8cb44b")
+	)
+	(fp_line
+		(start -3.605 2.91)
+		(end -3.605 -2.91)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "baae4021-a955-47c4-854d-bd6f6fd532ce")
+	)
+	(fp_line
+		(start -3 -2.5)
+		(end 3 -2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "c0130838-d0d7-4a9b-9399-e5ddf11f64e4")
+	)
+	(fp_line
+		(start -3 2.5)
+		(end -3 -2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "e92d75c4-304f-4871-bfa0-ca659f0bcf88")
+	)
+	(fp_line
+		(start 3 -2.5)
+		(end 3 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "574e94b4-bf1e-477c-9c42-a8fa216444fb")
+	)
+	(fp_line
+		(start 3 2.5)
+		(end -3 2.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "75185637-f080-40e1-b721-d11d8e15db33")
+	)
+	(fp_line
+		(start 3.605 -2.91)
+		(end 3.605 2.91)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "174053fa-8ba4-41fd-8bb7-69cb3b7e6dcb")
+	)
+	(fp_line
+		(start 3.605 2.91)
+		(end -3.605 2.91)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "a6360f9e-4ef1-4fa8-a9f4-91a3ebda573e")
+	)
+	(pad "1" smd rect
+		(at -2.26 0)
+		(size 2.39 5.51)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "5e7d1f95-0a6c-4639-98df-c099808c0b4d")
+	)
+	(pad "2" smd rect
+		(at 2.26 0)
+		(size 2.39 5.51)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "48c1b26b-ed35-40f4-b678-bf7507836da5")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/Custom/3dmodels/CKG57NX7T2W225M500JH.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
