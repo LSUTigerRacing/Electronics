@@ -614,16 +614,16 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 1.27 5.08 0)
+			(property "Reference" "U1"
+				(at 2.032 7.366 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "LM397"
-				(at 3.81 -5.08 0)
+			(property "Value" "TLV3701QDBVREP"
+				(at 7.62 4.318 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -639,7 +639,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm397.pdf"
+			(property "Datasheet" ""
 				(at 0 5.08 0)
 				(effects
 					(font
@@ -648,7 +648,25 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Single General-Purpose Voltage Comparator with Open-Collector Output, SOT-23-5"
+			(property "Description" "Single General-Purpose Voltage Comparator with Push-Pull Output, SOT-23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Manufacture#" " TLV3701QDBVREP "
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Mouser#" " 595-TLV3701QDBVREP "
 				(at 0 0 0)
 				(effects
 					(font
@@ -693,14 +711,14 @@
 				(pin input line
 					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "+"
+					(name "-"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -711,14 +729,14 @@
 				(pin input line
 					(at -7.62 -2.54 0)
 					(length 2.54)
-					(name "-"
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -772,7 +790,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -14278,7 +14296,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "7.5V"
+		(property "Value" "+7.5V"
 			(at 237.49 115.57 0)
 			(effects
 				(font
