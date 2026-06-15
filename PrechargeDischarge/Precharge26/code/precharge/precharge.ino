@@ -32,63 +32,84 @@
 #include "moving-average.h"
 #include "states.h"
 
-const float MIN_SDC_VOLTAGE = 11.0;  // [Volts]
+const float MIN_SDC_VOLTAGE = 3; // [Volts], updated 3/12 to accomodate for IR min Voltage of 7.5, and precharge min voltage of 9V on relay coils
 
 // Exponential Moving Average Filters
-MovingAverage TSV_Average(0, 0.1);  // Tractive system Voltage
-MovingAverage ACV_Average(0, 0.1);  // Accumulator (upstream of precharge resistor)
-MovingAverage SDC_Average(0, 0.5);  // Shutdown Circuit
+MovingAverage TSV_Average(0, 0.1); // Tractive system Voltage
+MovingAverage ACV_Average(0, 0.1); // Accumulator (upstream of precharge resistor)
+MovingAverage SDC_Average(0, 0.5); // Shutdown Circuit
 
 STATEVAR state = STATE_STANDBY;
 STATEVAR lastState = STATE_UNDEFINED;
 int errorCode = ERR_NONE;
 
-StatusLight statusLED[4]{ { STATUS_LED[0] },
+StatusLight statusLED[4] {{ STATUS_LED[0] },
                           { STATUS_LED[1] },
                           { STATUS_LED[2] },
-                          { STATUS_LED[3] } };
+                          { STATUS_LED[3] }};
 
 char lineBuffer[50];
-unsigned long now;  // Uptime from millis()
+unsigned long now; // Uptime from millis()
 
 void setup() {
   Serial.begin(460800);
   setupGPIO();
-  // delay(3000);  // TODO: remove during commissioning
+  //delay(1000);  // TODO: remove during commissioning
+
 }
 
 
 void loop() {
   now = millis();
 
-  // Always monitor Shutdown Circuit Voltage and react
+  // 1. ALWAYS monitor Shutdown Circuit 
   monitorShutdownCircuit();
 
-  // The State Machine
-  switch (state) {
-    case STATE_STANDBY:
+  // 2. ALWAYS monitor High Voltage Sensors
+  const unsigned long samplePeriod = 10; 
+  static unsigned long lastHVSample = 0;
+  if (now > lastHVSample + samplePeriod){ 
+    lastHVSample = now;
+    ACV_Average.update(getAccuVoltage());
+    TSV_Average.update(getTsVoltage());
+  }
+
+  // 3. The State Machine
+  switch(state){
+    case STATE_STANDBY :
       standby();
       break;
 
-    case STATE_PRECHARGE:
+    case STATE_PRECHARGE :
       precharge();
       break;
 
-    case STATE_ONLINE:
+    case STATE_ONLINE :
       running();
       break;
 
 
-    case STATE_ERROR:
+    case STATE_ERROR :
       errorState();
 
-    default:  // You tried to enter a state not defined in this switch-case
+    default : // You tried to enter a state not defined in this switch-case
       state = STATE_ERROR;
       errorCode |= ERR_STATE_UNDEFINED;
       errorState();
   }
 
   updateStatusLeds();
+
+  // --- GLOBAL HARDWARE DEBUG PRINT ---, put back in when testing AIR and PC outputs
+  //static unsigned long lastDebugPrint = 0;
+  //if (now > lastDebugPrint + 500) { // Print every 500ms
+  //  lastDebugPrint = now;
+   // Serial.print(F("HARDWARE STATUS -> PC_PIN: "));
+   // Serial.print(digitalRead(PRECHARGE_CTRL_PIN));
+    //Serial.print(F(" | MAIN_AIR_PIN: "));
+    //Serial.println(digitalRead(SHUTDOWN_CTRL_PIN));
+  //}
+
 }
 
 void monitorShutdownCircuit() {
@@ -98,7 +119,7 @@ void monitorShutdownCircuit() {
     SDC_Average.update(getShutdownCircuitVoltage());
   }
   // Error state should be deadlocked - no way out.
-  if (SDC_Average.value() < MIN_SDC_VOLTAGE && state != STATE_ERROR) {
+  if ( SDC_Average.value() < MIN_SDC_VOLTAGE && state != STATE_ERROR) {
     state = STATE_STANDBY;
   }
 }
@@ -112,12 +133,12 @@ void standby() {
     statusLED[0].on();
     Serial.println(F(" === STANDBY"));
     Serial.println(F("* Waiting for stable shutdown circuit"));
-    epoch = millis();  // make sure to reset if we've circled back to standby
+    epoch = millis(); // make sure to reset if we've circled back to standby
 
     // Reset moving averages
-    TSV_Average.reset();
-    ACV_Average.reset();
-    SDC_Average.reset();
+    // TSV_Average.reset();
+    // ACV_Average.reset();
+    // SDC_Average.reset();
   }
 
   // Disable AIR, Disable Precharge
@@ -125,31 +146,32 @@ void standby() {
   digitalWrite(SHUTDOWN_CTRL_PIN, LOW);
 
   // Check for stable shutdown circuit
-  const unsigned int WAIT_TIME = 200;  // ms to wait for stable voltage
-  if (SDC_Average.value() >= MIN_SDC_VOLTAGE) {
-    if (millis() > epoch + WAIT_TIME) {
+  const unsigned int WAIT_TIME = 200; // ms to wait for stable voltage
+  if (SDC_Average.value() >= MIN_SDC_VOLTAGE){
+    if (millis() > epoch + WAIT_TIME){
       state = STATE_PRECHARGE;
     }
   } else {
-    epoch = millis();  // reset timer
+    epoch = millis(); // reset timer
   }
+
 }
 
 // Close the precharge relay, monitor precharge voltage.
 // Trip error if charge-time looks unusual
 void precharge() {
   // Look for "too fast" or "too slow" precharge, indicates wiring fault
-  const float MIN_EXPECTED = 500;   // [ms]. Set this to something reasonable after collecting normal precharge sequence data
-  const float MAX_EXPECTED = 3000;  // [ms]. Set this to something reasonable after collecting normal precharge sequence data
+  const float MIN_EXPECTED = 1000; // [ms]. Set this to something reasonable after collecting normal precharge sequence data, change to 1000 when discharging, 0 when charging
+  const float MAX_EXPECTED = 2000; // [ms]. Set this to something reasonable after collecting normal precharge sequence data
   // If a precharge is detected faster than this, an error is
   // thrown - assumed wiring fault. This could also arrest oscillating or
   // chattering AIRs, because the TS will retain some amount of precharge.
-  const float TARGET_PERCENT = 90.0;       // TODO: Requires suitable value during commissioning (eg 95%)
-  const unsigned int SETTLING_TIME = 200;  // [ms] Precharge amount must be over TARGET_PERCENT for this long before we consider precharge complete
+  const float TARGET_PERCENT = 90.0;   // TODO: Requires suitable value during commissioning (eg 95%)
+  const unsigned int SETTLING_TIME = 150; // [ms] Precharge amount must be over TARGET_PERCENT for this long before we consider precharge complete
   static unsigned long epoch;
   static unsigned long tStartPre;
 
-  if (lastState != STATE_PRECHARGE) {
+  if (lastState != STATE_PRECHARGE){
     digitalWrite(PRECHARGE_CTRL_PIN, HIGH);
     lastState = STATE_PRECHARGE;
     statusLEDsOff();
@@ -160,36 +182,41 @@ void precharge() {
     tStartPre = now;
   }
 
-  // Sample the voltages and update moving averages
-  const unsigned long samplePeriod = 10;  // [ms] Period to measure voltages
-  static unsigned long lastSample = 0;
-  if (now > lastSample + samplePeriod) {  // samplePeriod and movingAverage alpha value will affect moving average response.
-    lastSample = now;
-    ACV_Average.update(getAccuVoltage());
-    TSV_Average.update(getTsVoltage());
-  }
-  double acv = ACV_Average.value();
-  double tsv = TSV_Average.value();
+   // Sample the voltages and update moving averages
+  //const unsigned long samplePeriod = 10; // [ms] Period to measure voltages
+  //static unsigned long lastSample = 0;
+  //if (now > lastSample + samplePeriod){  // samplePeriod and movingAverage alpha value will affect moving average response.
+   // lastSample = now;
+   // ACV_Average.update(getAccuVoltage());
+    //TSV_Average.update(getTsVoltage());
+  //}
+  // --- COMMENT OUT THE REAL SENSORS FOR BENCH TESTING ---
+   double acv = ACV_Average.value(); 
+   double tsv = TSV_Average.value();
+  
+ //double acv = 302.4; // ACV_Average.value() when Motor controller is in, 302.4 when charging/bench testing
+ //double tsv = 302.4; //TSV_avg value() when MC is in, 302.4 when charging/bench
 
   // The precharge progress is a function of the accumulator voltage
-  double prechargeProgress = 100.0 * tsv / acv;  // [%]
+  double prechargeProgress = 100.0 * tsv / acv; // [%]
 
   // Print Precharging progress
   static unsigned long lastPrint = 0;
   if (now >= lastPrint + 100) {
     lastPrint = now;
-    sprintf(lineBuffer, "%5lums %4.1f%%   %5.1fV\n", now - tStartPre, prechargeProgress, TSV_Average.value());
+    sprintf(lineBuffer, "%5lums %4.1f%%   %5.1fV\n", now-tStartPre, prechargeProgress, TSV_Average.value());
     Serial.print(lineBuffer);
   }
 
   // Check if precharge complete
-  if (prechargeProgress >= TARGET_PERCENT) {
+  if ( prechargeProgress >= TARGET_PERCENT ) {
     // Precharge complete
-    if (now > epoch + SETTLING_TIME) {
+    if (now > epoch + SETTLING_TIME){
       state = STATE_ONLINE;
       sprintf(lineBuffer, "* Precharge complete at: %2.0f%%   %5.1fV\n", prechargeProgress, TSV_Average.value());
       Serial.print(lineBuffer);
-    } else if (now < tStartPre + MIN_EXPECTED && now > epoch + SETTLING_TIME) {  // Precharge too fast - something's wrong!
+    }
+    else if (now < tStartPre + MIN_EXPECTED && now > epoch + SETTLING_TIME) {    // Precharge too fast - something's wrong!
       state = STATE_ERROR;
       errorCode |= ERR_PRECHARGE_TOO_FAST;
     }
@@ -198,17 +225,20 @@ void precharge() {
     // Precharging
     epoch = now;
 
-    if (now > tStartPre + MAX_EXPECTED) {  // Precharge too slow - something's wrong!
+    if (now > tStartPre + MAX_EXPECTED) {       // Precharge too slow - something's wrong!
       state = STATE_ERROR;
       errorCode |= ERR_PRECHARGE_TOO_SLOW;
     }
   }
+
+
+
 }
 
 void running() {
-  const unsigned int T_OVERLAP = 500;  // ms. Time to overlap the switching of AIR and Precharge
+  const unsigned int T_OVERLAP = 500; // ms. Time to overlap the switching of AIR and Precharge
   static unsigned long epoch;
-  if (lastState != STATE_ONLINE) {
+  if (lastState != STATE_ONLINE){
     statusLEDsOff();
     statusLED[2].on();
     Serial.println(F(" === RUNNING"));
@@ -218,20 +248,21 @@ void running() {
 
   digitalWrite(SHUTDOWN_CTRL_PIN, HIGH);
   if (now > epoch + T_OVERLAP) digitalWrite(PRECHARGE_CTRL_PIN, LOW);
+
 }
 
 void errorState() {
   digitalWrite(PRECHARGE_CTRL_PIN, LOW);
   digitalWrite(SHUTDOWN_CTRL_PIN, LOW);
 
-  if (lastState != STATE_ERROR) {
+  if (lastState != STATE_ERROR){
     lastState = STATE_ERROR;
     statusLEDsOff();
-    statusLED[3].update(50, 50);  // Strobe STS LED
+    statusLED[3].update(50,50); // Strobe STS LED
     Serial.println(F(" === ERROR"));
 
     // Display errors: Serial and Status LEDs
-    if (errorCode == ERR_NONE) {
+    if (errorCode == ERR_NONE){
       Serial.println(F("   *Error state, but no error code logged..."));
     }
     if (errorCode & ERR_PRECHARGE_TOO_FAST) {
@@ -246,22 +277,23 @@ void errorState() {
       Serial.println(F("   *State not defined in The State Machine."));
     }
   }
+
 }
 
 
 // Loop through the array and call update.
 void updateStatusLeds() {
-  for (uint8_t i = 0; i < (sizeof(statusLED) / sizeof(*statusLED)); i++) {
+  for (uint8_t i=0; i<(sizeof(statusLED)/sizeof(*statusLED)); i++){
     statusLED[i].update();
   }
 }
 void statusLEDsOff() {
-  for (uint8_t i = 0; i < (sizeof(statusLED) / sizeof(*statusLED)); i++) {
+  for (uint8_t i=0; i<(sizeof(statusLED)/sizeof(*statusLED)); i++){
     statusLED[i].off();
   }
 }
 void updateStatusLeds(long ton, long toff) {
-  for (uint8_t i = 0; i < (sizeof(statusLED) / sizeof(*statusLED)); i++) {
+  for (uint8_t i=0; i<(sizeof(statusLED)/sizeof(*statusLED)); i++){
     statusLED[i].update(ton, toff);
   }
 }
