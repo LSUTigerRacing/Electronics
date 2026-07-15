@@ -1,0 +1,7 @@
+"Reference","Qty","Value","DNP","Exclude from BOM","Exclude from Board","Footprint","Datasheet","MFR","JLC"
+"D1","1","Schottky","","","","Diode_SMD:D_SMA","https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8586172667489079296"," SS34","C8678"
+"J1","1","HV_Conn","","","","Discharge:MicroFit_4pin","~","",""
+"J2","1","LV_Conn","","","","Connector_Molex:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal","https://jlcpcb.com/partdetail/MOLEX-1053131103/C561764","1053131103","C561764"
+"Q5","1","NMOS","","","","Package_TO_SOT_SMD:SOT-23","","",""
+"R50","1","HSA503K0J","","","","Discharge:Discharge_Resistor","https://www.digikey.com/en/products/detail/te-connectivity-passive-product/HSA503K0J/5587244?s=N4IgjCBcoEwAwA4CsVQGMoDMCGAbAzgKYA0IA9lANogDMABANYDyAFgLb4gC6pADgC5QQAVQB2AS35NMAWULZ8AVwBOhEAF91pGFRAAJAMoBBJHG7qgA","",""
+"R51","1","10k","","","","Resistor_SMD:R_1206_3216Metric","~","",""
