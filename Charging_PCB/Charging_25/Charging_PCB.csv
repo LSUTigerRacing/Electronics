@@ -1,6 +1,0 @@
-"Value","Reference","Footprint","JLC#"
-"D_Schottky","D101,D102","Diode_SMD:D_SMA","C8678"
-"Relay_SPDT_Omron_G2RL-1","K101,K102","Relay_THT:Relay_SPDT_Omron_G2RL-1","C1524507"
-"Q_PMOS_GSD","Q101,Q102","Library:SOT-523_Custom(C96676)","C96676"
-"1K","R101","Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder","C17513"
-"2.2K","R102","Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder","C17520"
